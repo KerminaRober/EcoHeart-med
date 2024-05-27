@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Elderly Care</title>
+  <link href="elderly-care.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+        margin-top: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Elderly Care</h1>
+      <p>Find tips for maintaining health, managing chronic conditions, and caregiving for the elderly.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>Maintaining Health</h2>
+      <p>As people age, maintaining health becomes increasingly important. Here are some key points:</p>
+      <ul>
+        <li><strong>Regular check-ups:</strong> Schedule regular medical check-ups to monitor health conditions.</li>
+        <li><strong>Healthy diet:</strong> Follow a balanced diet rich in nutrients to support overall health.</li>
+        <li><strong>Stay active:</strong> Engage in regular physical activity to maintain mobility and strength.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Managing Chronic Conditions</h2>
+      <p>Managing chronic conditions is crucial for elderly individuals. Consider these tips:</p>
+      <ul>
+        <li><strong>Medication management:</strong> Follow prescribed medication regimens and keep a medication schedule.</li>
+        <li><strong>Monitor symptoms:</strong> Keep track of any changes in symptoms and communicate them to healthcare providers.</li>
+        <li><strong>Stay informed:</strong> Educate yourself about the chronic conditions and the latest treatment options.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Caregiving Tips</h2>
+      <p>Providing care for elderly individuals requires patience and understanding. Here are some tips:</p>
+      <ul>
+        <li><strong>Communicate effectively:</strong> Maintain open and compassionate communication with the elderly.</li>
+        <li><strong>Provide emotional support:</strong> Offer emotional support and companionship to enhance their well-being.</li>
+        <li><strong>Seek professional help:</strong> Don’t hesitate to seek help from professional caregivers or support services.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Home Safety</h2>
+      <p>Ensuring a safe living environment is essential for the elderly. Here are some safety tips:</p>
+      <ul>
+        <li><strong>Fall prevention:</strong> Remove tripping hazards and install grab bars in key areas.</li>
+        <li><strong>Fire safety:</strong> Install smoke detectors and ensure easy access to emergency exits.</li>
+        <li><strong>Emergency plan:</strong> Have a clear emergency plan in place and ensure they know how to get help quickly.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

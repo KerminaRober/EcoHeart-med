@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Medical Procedures and Surgeries</title>
+  <link href="medical-procedures.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+        top: 60%;
+      }
+
+      .text-box p {
+        font-size: 18px;
+        top: 60%;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+        margin-top: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Medical Procedures and Surgeries</h1>
+      <p>Get descriptions of common procedures, expectations, and recovery tips.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>Understanding Medical Procedures</h2>
+      <p>Medical procedures are essential interventions aimed at diagnosing, treating, or managing various health conditions. They range from non-invasive tests to major surgeries.</p>
+      <ul>
+        <li><strong>Diagnostic Procedures:</strong> Techniques like X-rays, MRIs, and blood tests help in identifying health issues.</li>
+        <li><strong>Therapeutic Procedures:</strong> Interventions like chemotherapy, radiation therapy, and physical therapy used to treat conditions.</li>
+        <li><strong>Minimally Invasive Procedures:</strong> Techniques such as laparoscopic surgery that involve smaller incisions and quicker recovery times.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Common Surgical Procedures</h2>
+      <p>Surgeries are performed to correct health problems, relieve symptoms, or improve bodily functions. Common surgical procedures include:</p>
+      <ul>
+        <li><strong>Appendectomy:</strong> Removal of the appendix, usually due to appendicitis.</li>
+        <li><strong>Cholecystectomy:</strong> Surgical removal of the gallbladder.</li>
+        <li><strong>Cataract Surgery:</strong> Removal of cloudy lens in the eye to restore vision.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Preoperative Preparation</h2>
+      <p>Proper preparation is crucial for a successful surgery. Steps often include:</p>
+      <ul>
+        <li><strong>Medical Evaluation:</strong> Comprehensive assessment including blood tests, imaging, and medical history review.</li>
+        <li><strong>Medication Review:</strong> Adjusting or stopping certain medications to reduce surgical risks.</li>
+        <li><strong>Fasting:</strong> Refraining from eating or drinking for a specified period before surgery.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Postoperative Care</h2>
+      <p>Recovery and postoperative care are essential to ensure successful outcomes and prevent complications. Key aspects include:</p>
+      <ul>
+        <li><strong>Pain Management:</strong> Medications and techniques to manage pain and discomfort after surgery.</li>
+        <li><strong>Wound Care:</strong> Proper cleaning and monitoring of surgical sites to prevent infection.</li>
+        <li><strong>Follow-Up Appointments:</strong> Regular check-ups to monitor healing and address any issues.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Risks and Complications</h2>
+      <p>All medical procedures carry potential risks and complications. Understanding these can help in making informed decisions. Common risks include:</p>
+      <ul>
+        <li><strong>Infections:</strong> Risks of bacterial or viral infections at the surgical site or within the body.</li>
+        <li><strong>Bleeding:</strong> Uncontrolled bleeding during or after surgery.</li>
+        <li><strong>Adverse Reactions:</strong> Reactions to anesthesia or medications used during the procedure.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

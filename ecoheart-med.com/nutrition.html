@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Nutrition and Diet Tips</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    .profile, .appointments, .records, .messages, .book-appointment, .compose-message {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a:hover, .nav-tabs a.active-tab {
+      background: #004080;
+      transition: 0.3s;
+    }
+
+    .btn {
+      background-color: #002359;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #004080;
+    }
+
+    a {
+      text-decoration: none;
+      color: #11257B;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 25px;
+        padding: 7px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .icon {
+        font-size: 40px;
+        padding: 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Nutrition and Diet Tips</h1>
+      <p>Discover healthy eating habits, balanced diet plans, and nutritional advice for overall well-being.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>Importance of Nutrition</h2>
+      <p>Nutrition plays a critical role in maintaining good health and well-being. Eating a balanced diet can help you feel your best and have plenty of energy. Here are some key points to consider:</p>
+      <ul>
+        <li>A balanced diet provides the nutrients your body needs to function effectively.</li>
+        <li>Good nutrition can help prevent various diseases, including heart disease, diabetes, and certain cancers.</li>
+        <li>Proper nutrition supports overall growth and development, especially in children.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Healthy Eating Tips</h2>
+      <p>Adopting healthy eating habits can significantly impact your health. Here are some tips to get you started:</p>
+      <ul>
+        <li><strong>Eat a variety of foods:</strong> Include different types of fruits, vegetables, grains, protein sources, and dairy in your diet.</li>
+        <li><strong>Watch portion sizes:</strong> Be mindful of portion sizes to avoid overeating.</li>
+        <li><strong>Limit sugar and salt intake:</strong> Reduce your consumption of foods and drinks high in added sugars and salt.</li>
+        <li><strong>Stay hydrated:</strong> Drink plenty of water throughout the day to stay hydrated.</li>
+        <li><strong>Plan your meals:</strong> Plan your meals and snacks ahead of time to ensure you're eating a balanced diet.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Sample Meal Plans</h2>
+      <p>Here are some sample meal plans to help you get started on a healthy eating journey:</p>
+      <h3>Breakfast:</h3>
+      <ul>
+        <li>Oatmeal with fresh berries and a drizzle of honey.</li>
+        <li>Greek yogurt with granola and a handful of nuts.</li>
+        <li>Whole grain toast with avocado and a poached egg.</li>
+      </ul>
+
+      <h3>Lunch:</h3>
+      <ul>
+        <li>Grilled chicken salad with a variety of vegetables and a light vinaigrette.</li>
+        <li>Quinoa bowl with black beans, corn, avocado, and salsa.</li>
+        <li>Whole grain wrap with hummus, turkey, and mixed greens.</li>
+      </ul>
+
+      <h3>Dinner:</h3>
+      <ul>
+        <li>Baked salmon with a side of steamed broccoli and brown rice.</li>
+        <li>Stir-fried tofu with mixed vegetables and quinoa.</li>
+        <li>Spaghetti squash with marinara sauce and a sprinkle of parmesan cheese.</li>
+      </ul>
+
+      <h3>Snacks:</h3>
+      <ul>
+        <li>Fresh fruit slices.</li>
+        <li>Handful of raw nuts or seeds.</li>
+        <li>Veggies with hummus or guacamole.</li>
+        <li>Plain Greek yogurt with a drizzle of honey.</li>
+        </ul>
+        </div>
+
+        <div class="content">
+        <h2>Additional Resources</h2>
+        <p>For more information on nutrition and healthy eating, consider exploring the following resources:</p>
+        <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Dietary_Guidelines_for_Americans">Dietary Guidelines for Americans</a>: Official guidelines providing recommendations for healthy eating and physical activity.</li>
+        <li><a href="https://www.myplate.gov/">ChooseMyPlate.gov</a>: Interactive tools and resources to help individuals and families make healthier food choices.</li>
+        <li><a href="https://www.bing.com/ck/a?!&&p=2a3778d59722383eJmltdHM9MTcxNjUwODgwMCZpZ3VpZD0yYmEyMDNiMS03NGE2LTZjZWItMGQyZS0xMGNmNzU5NTZkODEmaW5zaWQ9NTIwOA&ptn=3&ver=2&hsh=3&fclid=2ba203b1-74a6-6ceb-0d2e-10cf75956d81&psq=academy+of+nutrition+and+dietetics&u=a1aHR0cHM6Ly93d3cuZWF0cmlnaHQub3JnLw&ntb=1">Academy of Nutrition and Dietetics</a>: Professional organization offering nutrition information, resources, and expert advice.</li>
+        <li><a href="https://www.bing.com/ck/a?!&&p=e4eabec71246441fJmltdHM9MTcxNjUwODgwMCZpZ3VpZD0yYmEyMDNiMS03NGE2LTZjZWItMGQyZS0xMGNmNzU5NTZkODEmaW5zaWQ9NTIwMQ&ptn=3&ver=2&hsh=3&fclid=2ba203b1-74a6-6ceb-0d2e-10cf75956d81&psq=Nutrition.gov&u=a1aHR0cHM6Ly93d3cubnV0cml0aW9uLmdvdi8&ntb=1">Nutrition.gov</a>: Comprehensive information on nutrition, dietary supplements, and food safety.</li>
+        </ul>
+       </div>
+      </div>
+    </body>
+
+   </html>

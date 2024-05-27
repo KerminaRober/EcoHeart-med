@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Mental Health and Well-being</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    .profile, .appointments, .records, .messages, .book-appointment, .compose-message {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a:hover, .nav-tabs a.active-tab {
+      background: #004080;
+      transition: 0.3s;
+    }
+
+    .btn {
+      background-color: #002359;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #004080;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .icon {
+        font-size: 40px;
+        padding: 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Mental Health and Well-being</h1>
+      <p>Promoting mental health and well-being for a balanced life.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>Understanding Mental Health</h2>
+      <p>Mental health is a crucial part of overall health and well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.</p>
+      <p>Several factors contribute to mental health problems, including:</p>
+      <ul>
+        <li>Biological factors, such as genes or brain chemistry.</li>
+        <li>Life experiences, such as trauma or abuse.</li>
+        <li>Family history of mental health problems.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Promoting Mental Well-being</h2>
+      <p>Maintaining good mental health involves various strategies, including:</p>
+      <ul>
+        <li><strong>Staying physically active:</strong> Regular exercise can help reduce anxiety and improve mood.</li>
+        <li><strong>Eating a balanced diet:</strong> Proper nutrition supports both physical and mental health.</li>
+        <li><strong>Getting enough sleep:</strong> Quality sleep is essential for mental health.</li>
+        <li><strong>Connecting with others:</strong> Strong social networks and relationships can provide emotional support.</li>
+        <li><strong>Practicing mindfulness:</strong> Techniques such as meditation can help manage stress.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>When to Seek Help</h2>
+      <p>It's important to seek help if you or someone you know is experiencing mental health issues. Signs that it may be time to seek help include:</p>
+      <ul>
+        <li>Feeling persistently sad or down.</li>
+        <li>Excessive fears or worries.</li>
+        <li>Extreme mood changes.</li>
+        <li>Withdrawal from friends and activities.</li>
+        <li>Significant tiredness, low energy, or problems sleeping.</li>
+      </ul>
+      <p>If you or someone you know is in crisis, seek immediate help from a healthcare provider or contact emergency services.</p>
+    </div>
+
+    <div class="content">
+      <h2>Resources and Support</h2>
+      <p>There are numerous resources available to help individuals maintain and improve their mental health:</p>
+      <ul>
+        <li>Healthcare providers, including primary care doctors and mental health specialists.</li>
+        <li>Support groups and community organizations.</li>
+        <li>Online resources and helplines.</li>
+      </ul>
+      <p>Remember, taking care of your mental health is just as important as taking care of your physical health.</p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Technology in Healthcare</title>
+  <link href="technology-healthcare.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+        top: 60%;
+      }
+
+      .text-box p {
+        font-size: 18px;
+        top: 60%;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+        margin-top: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Technology in Healthcare</h1>
+      <p>Explore how technology like telemedicine and health apps is transforming healthcare.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>The Impact of Technology on Healthcare</h2>
+      <p>Technology is revolutionizing healthcare, making it more efficient, accessible, and effective. From telemedicine to health apps, technology plays a crucial role in improving patient care.</p>
+      <ul>
+        <li><strong>Telemedicine:</strong> Allows patients to consult with healthcare providers remotely, increasing access to care.</li>
+        <li><strong>Health Apps:</strong> Mobile applications that help individuals monitor and manage their health and wellness.</li>
+        <li><strong>Electronic Health Records (EHRs):</strong> Digital versions of patients' paper charts, making information sharing easier and more accurate.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Telemedicine</h2>
+      <p>Telemedicine uses technology to provide clinical care at a distance. Benefits include:</p>
+      <ul>
+        <li><strong>Accessibility:</strong> Improves access to healthcare services for people in remote areas.</li>
+        <li><strong>Convenience:</strong> Reduces the need for travel and wait times.</li>
+        <li><strong>Cost-Effectiveness:</strong> Lowers healthcare costs by reducing the need for in-person visits.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Health Apps</h2>
+      <p>Health apps are designed to help individuals monitor their health and wellness. Popular types include:</p>
+      <ul>
+        <li><strong>Fitness Apps:</strong> Track physical activity, workouts, and fitness goals.</li>
+        <li><strong>Diet and Nutrition Apps:</strong> Help users maintain a healthy diet and track nutritional intake.</li>
+        <li><strong>Medication Management Apps:</strong> Remind users to take medications and manage prescriptions.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Electronic Health Records (EHRs)</h2>
+      <p>EHRs are digital records of patients' medical histories. They offer several advantages:</p>
+      <ul>
+        <li><strong>Improved Accuracy:</strong> Reduces errors associated with manual records.</li>
+        <li><strong>Better Coordination:</strong> Facilitates information sharing among healthcare providers.</li>
+        <li><strong>Enhanced Efficiency:</strong> Streamlines administrative tasks and reduces paperwork.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Wearable Technology</h2>
+      <p>Wearable devices like smartwatches and fitness trackers are becoming increasingly popular. They offer benefits such as:</p>
+      <ul>
+        <li><strong>Real-Time Monitoring:</strong> Continuously track health metrics like heart rate, steps, and sleep patterns.</li>
+        <li><strong>Proactive Health Management:</strong> Help users make informed decisions about their health.</li>
+        <li><strong>Data Sharing:</strong> Enable users to share health data with healthcare providers for better care management.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Artificial Intelligence (AI) in Healthcare</h2>
+      <p>AI is transforming healthcare by providing advanced data analysis and decision-making support. Applications include:</p>
+      <ul>
+        <li><strong>Predictive Analytics:</strong> Predict patient outcomes and disease outbreaks.</li>
+        <li><strong>Medical Imaging:</strong> Enhance the accuracy of diagnoses through image analysis.</li>
+        <li><strong>Personalized Treatment:</strong> Tailor treatments to individual patients based on data analysis.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

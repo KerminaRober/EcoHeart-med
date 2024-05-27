@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Men’s Health</title>
+  <link href="mens-health.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Men’s Health</h1>
+      <p>Read about prostate health, testosterone levels, and tips for men’s healthy living.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>Prostate Health</h2>
+      <p>Prostate health is a critical aspect of men's health, particularly as men age. Here are some important points:</p>
+      <ul>
+        <li><strong>Regular screenings:</strong> Get regular prostate screenings to detect any issues early.</li>
+        <li><strong>Healthy diet:</strong> Eat a diet rich in fruits, vegetables, and healthy fats to support prostate health.</li>
+        <li><strong>Exercise:</strong> Engage in regular physical activity to maintain overall health and well-being.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Testosterone Levels</h2>
+      <p>Maintaining healthy testosterone levels is important for men's health. Here are some tips:</p>
+      <ul>
+        <li><strong>Balanced diet:</strong> Ensure a balanced diet with adequate proteins, fats, and carbohydrates.</li>
+        <li><strong>Regular exercise:</strong> Include both strength training and cardiovascular exercises in your routine.</li>
+        <li><strong>Sleep well:</strong> Get enough sleep each night to support hormone production and overall health.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Healthy Living Tips</h2>
+      <p>Overall wellness for men involves a holistic approach to physical and mental health. Here are some key tips:</p>
+      <ul>
+        <li><strong>Regular exercise:</strong> Stay active with a mix of aerobic and strength training exercises.</li>
+        <li><strong>Healthy diet:</strong> Eat a variety of nutrient-dense foods to maintain energy and health.</li>
+        <li><strong>Mental health:</strong> Manage stress through activities like meditation, hobbies, and spending time with loved ones.</li>
+        <li><strong>Routine check-ups:</strong> Visit your healthcare provider regularly for preventive care and screenings.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x:hidden;
+    }
+
+    .header {
+      min-height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('https://wallpaperaccess.com/full/624111.jpg');
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    #eco {
+      text-decoration: none;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 62px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .welcome {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .welcome h1{
+      font-size: 35px;
+    }
+
+    .health-inf {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .health-inf h1 {
+      font-size: 35px;
+      font-weight: 600;
+    }
+
+    p {
+      color: #333;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 22px;
+      padding: 10px;
+    }
+
+    .row1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 5%;
+    }
+
+    .health {
+      flex-basis: 31%;
+      background: #EFF5F7;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      transition: 0.5s;
+      text-align: left;
+    }
+
+    h3 {
+      font-weight: 300px;
+      margin: 10px 0;
+    }
+
+    .health:hover {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .icon {
+      font-size: 50px;
+      padding: 20px;
+      color: #002359;
+    }
+    .health a{
+      text-decoration: none;
+      color: #002359;
+    }
+    .view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #008080; /* Change this color to match the desired color */
+    font-size: 30px;
+    text-decoration: none;
+    }
+
+    .symptom{
+      margin: 50px;
+    }
+
+    .symptom-checker {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #002359;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #002359;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004080;
+    }
+
+    #result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .h1{
+      font-size: 35px;
+    }
+
+    .bmi {
+      margin: 50px;
+    }
+
+    .bmi-calculator {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .bmi-calculator h1 {
+      text-align: center;
+      color: #002359;
+    }
+
+    .bmi-calculator .form-group {
+      margin-bottom: 15px;
+    }
+
+    .bmi-calculator label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .bmi-calculator input[type="number"],
+    .bmi-calculator button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .bmi-calculator .gender-group {
+      display: flex;
+      padding: 5px;
+      align-items: center;
+    }
+
+    .bmi-calculator .gender-group input[type="radio"] {
+      width: auto;
+      margin: 0 10px 0 0;
+    }
+
+    .bmi-calculator .gender-group label {
+      margin: 0 10px 0 0;
+    }
+
+    .bmi-calculator button {
+      background-color: #002359;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .bmi-calculator button:hover {
+      background-color: #004080;
+    }
+
+    .bmi-calculator #bmiResult {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact{
+      width: 80%;
+      margin: 100px auto;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://wallpaperaccess.com/full/20593.jpg');
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px;
+      text-align: center;
+      padding: 100px 0;
+    }
+    .contact h2{
+      color: #D2E0F1;
+      margin-bottom: 40px;
+      padding: 0;
+    }
+    .about-us {
+      padding: 50px;
+    }
+
+    .about-us .h1 {
+      font-size: 35px;
+      text-align: center;
+      color: #002359;
+      margin-bottom: 20px;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content p {
+      font-size: 17px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .about-content h2 {
+      font-size: 25px;
+      color: #002359;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .about-content ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .about-content ul li {
+      font-size: 17px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    .footer {
+      background: #002359;
+      padding: 30px 0;
+      font-family: 'Play', sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer .row {
+      width: 100%;
+      margin: 1% 0%;
+      padding: 0.6% 0%;
+      color: #d2e0f1;
+      font-size: 0.8em;
+    }
+
+    .footer .row a {
+      text-decoration: none;
+      color: #d2e0f1;
+      transition: 0.5s;
+    }
+
+    .footer .row a:hover {
+      color: #fff;
+    }
+
+    .footer .row ul {
+      width: 100%;
+    }
+
+    .footer .row ul li {
+      display: inline-block;
+      margin: 0px 30px;
+    }
+
+    .footer .row a i {
+      font-size: 2em;
+      margin: 0% 1%;
+    }
+
+    @media (max-width: 720px) {
+      .footer {
+        text-align: left;
+        padding: 5%;
+      }
+      .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+      }
+      .footer .row a i {
+        margin: 0% 3%;
+      }
+    }
+    .hero-btn{
+      display: inner-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 12px 34px;
+      font-size: 13px;
+      background: transparent;
+      position: relative;
+      cursor: pointer;
+    }
+    .hero-btn:hover{
+      border: 1px solid #002359;
+      background: #002359;
+      transition: 1s;
+    }
+    nav .fa{
+      display: none;
+    }
+    @media (max-width: 700px) {
+      .text-box h1{
+        font-size: 45px;
+      }
+      .nav-links ul li{
+        display: block;
+      }
+        #navLinks {
+          position: fixed;
+          top: 0;
+          right: -200px; /* Initially hidden */
+          height: 100%;
+          width: 200px;
+          background: #002359;
+          text-align: left;
+          z-index: 2;
+          transition: right 1s; /* Add transition for smooth animation */
+      }
+      nav .fa{
+        display: block;
+        color: #D2E0F1;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .nav-links ul{
+        padding: 30px;
+      }
+      .row{
+        flex-direction: column;
+      }
+      .hide{
+        display: none;
+      }
+      nav h2{
+        margin: 10px;
+      }
+      .health {
+        flex-basis: 100%; /* Take full width */
+        background: #EFF5F7;
+        border-radius: 10px;
+        margin-bottom: 20px; /* Add margin between each health div */
+        padding: 20px 12px;
+        box-sizing: border-box;
+        transition: 0.5s;
+        text-align: left;
+      }
+      .contact h2{
+        font-size: 20px;
+        padding: 5px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="ecoheart.html">Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="patient-portal.html">Patient Portal</a></li>
+          <li><a href="#blog">Our Blog</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <div class="text-box">
+    <h1>EcoHeart</h1>
+    <p>Healing Lives, Nurturing Earth, One Beat at a Time</p>
+    <a href="#welcome" class="hero-btn">Visit us to know more</a>
+    </div>
+  </section>
+
+  <div class="welcome" id="welcome">
+    <h1>Welcome to EcoHeart</h1><br>
+    <p>Welcome to <strong>EcoHeart</strong>, your trusted resource for comprehensive health information and wellness advice. Our mission is to empower you with the knowledge and tools you need to lead a healthy and fulfilling life.<br><br>
+
+    At EcoHeart, we believe in a holistic approach to health, combining the latest medical research with natural and sustainable practices. Whether you're looking for information on specific diseases, tips for a heart-healthy lifestyle, or the latest breakthroughs in medical science, you'll find it here.<br><br>
+
+    Explore our extensive library of articles, stay informed with our latest updates, and join our community committed to health and well-being. Thank you for choosing EcoHeart as your partner in health.</p>
+  </div>
+
+  <section class="health-inf">
+    <h1>Health Information & Articles</h1>
+    <p>Stay informed with our latest insights and articles covering a wide range of health topics, from wellness tips to medical breakthroughs.</p>
+
+    <div class="row1">
+      <div class="health">
+        <div class="icon"><i class="fas fa-medkit"></i></div>
+        <h3>Understanding Common Health Conditions:</h3>
+        <p>Learn about prevalent health issues, their symptoms, causes, and treatments.</p>
+        <a href="common-d.html">view all ></a>
+      </div>
+      <div class="health">
+        <div class="icon"><i class="fas fa-carrot"></i></div>
+        <h3>Nutrition and Diet Tips:</h3>
+        <p>Discover healthy eating habits, balanced diet plans, and nutritional advice for overall well-being.</p>
+        <a href="nutrition.html">view all ></a>
+      </div>
+      <div class="health">
+        <div class="icon"><i class="fas fa-dumbbell"></i></div>
+        <h3>Fitness and Exercise Guides:</h3>
+        <p>Explore workout routines, exercise tips, and fitness strategies to improve physical health and stamina.</p>
+        <a href="fitness.html">view all ></a>
+      </div>
+      <div class="health hide">
+        <div class="icon"><i class="fas fa-brain"></i></div>
+        <h3>Mental Health and Well-being:</h3>
+        <p>Find guidance on managing stress, enhancing emotional wellness, and maintaining mental clarity.</p>
+        <a href="mental.html">view all ></a>
+      </div>
+      <div class="health hide">
+        <div class="icon"><i class="fas fa-user-md"></i></div>
+        <h3>Preventive Care and Screenings:</h3>
+        <p> Learn about preventive healthcare measures, routine screenings, and early detection of diseases.</p>
+        <a href="preventive-care.html">view all ></a>
+      </div>
+      <div class="health">
+        <a href="health.html" class="view">View all &#8599;</a>
+        </div>
+    </div>
+  </section>
+  
+  <section class="symptom">
+    <h1 class="h1">Symptom Checker</h1>
+    <center><p>Enter your symptom and severity to get advice on potential causes and whether to seek medical attention.</p></center>
+    <div class="symptom-checker">
+    <h1>Symptom Checker</h1>
+    <form id="symptomForm">
+      <div class="form-group">
+        <label for="symptom">Enter your symptom:</label>
+        <input type="text" id="symptom" name="symptom" placeholder="e.g., headache" required>
+      </div>
+      <div class="form-group">
+        <label for="severity">Severity:</label>
+        <select id="severity" name="severity" required>
+          <option value="">Select severity</option>
+          <option value="mild">Mild</option>
+          <option value="moderate">Moderate</option>
+          <option value="severe">Severe</option>
+        </select>
+      </div>
+      <button type="submit">Check</button>
+    </form>
+    <div id="result"></div>
+   </div>
+  </section>
+
+  <section class="bmi">
+    <h1 class="h1">BMI Calculator</h1>
+    <center><p>Calculate your Body Mass Index (BMI) by entering your weight, height, and gender.</p></center>
+    <div class="bmi-calculator">
+      <h1>BMI Calculator</h1>
+      <form id="bmiForm">
+        <div class="form-group">
+          <label for="weight">Weight (kg):</label>
+          <input type="number" id="weight" name="weight" placeholder="e.g., 70" required>
+        </div>
+        <div class="form-group">
+          <label for="height">Height (cm):</label>
+          <input type="number" id="height" name="height" placeholder="e.g., 170" required>
+        </div>
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="gender-group">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <button type="submit">Calculate BMI</button>
+      </form>
+      <div id="bmiResult" style="display:none;">
+        <h3>Your BMI is: <span id="bmiValue"></span></h3>
+        <p id="bmiMessage"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact"  id="contact">
+    <h2>Explore our expert-written health blogs, read patient stories, and join our community forums for support and discussion</h2>
+    <a href="https://ecoheart-community.blogspot.com/" class="hero-btn" id="blog">Our Blog</a>
+  </section>
+
+  <section id="about-us" class="about-us">
+    <h1 class="h1">About Us</h1>
+    <div class="about-content">
+      <p>
+        At EcoHeart, we believe in a holistic approach to health. Our range of services includes expert consultations, cutting-edge diagnostics, personalized treatment plans, and ongoing support to ensure you achieve and maintain optimal health. We combine modern medical practices with a patient-centered philosophy to create a welcoming and supportive environment.
+      </p>
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to enhance the health and well-being of our community by providing accessible, high-quality healthcare services. We strive to empower our patients through education and support, helping them make informed decisions about their health.
+      </p>
+      <h2>Our Values</h2>
+      <ul>
+        <li><strong>Compassion:</strong> We treat each patient with kindness, respect, and empathy.</li>
+        <li><strong>Excellence:</strong> We are committed to excellence in all aspects of our care.</li>
+        <li><strong>Integrity:</strong> We uphold the highest standards of ethical behavior and transparency.</li>
+        <li><strong>Innovation:</strong> We embrace innovation to provide the most effective treatments and solutions.</li>
+        <li><strong>Community:</strong> We work collaboratively to improve the health and well-being of our community.</li>
+      </ul>
+      <h2>Meet Our Team</h2>
+      <p>
+        Our team consists of highly skilled and compassionate healthcare professionals, including doctors, nurses, therapists, and support staff. Each member of our team is dedicated to providing personalized care and ensuring a positive experience for every patient.
+      </p>
+      <h2>Why Choose Us?</h2>
+      <p>
+        Choosing EcoHeart means choosing a partner in your health journey. We offer:
+      </p>
+      <ul>
+        <li>Comprehensive services covering a wide range of medical needs.</li>
+        <li>State-of-the-art facilities and advanced technology.</li>
+        <li>Personalized care plans tailored to your specific needs.</li>
+        <li>A compassionate and supportive team focused on your well-being.</li>
+        <li>Convenient access to care, including online services and telehealth options.</li>
+      </ul>
+      <p>
+        We invite you to explore our services and join our community of patients who trust us with their health. Thank you for choosing EcoHeart as your healthcare provider.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      <div class="row">
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="row">
+        EcoHeart Copyright © 2024 EcoHeart - All rights reserved || Designed By: Kitty 
+      </div>
+    </div>
+  </footer>
+  <script>
+    var navLinks = document.getElementById("navLinks");
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = "-200px";
+    }
+
+    document.getElementById('symptomForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const symptom = document.getElementById('symptom').value.toLowerCase();
+      const severity = document.getElementById('severity').value;
+      let result = '';
+
+      if (symptom && severity) {
+        switch (symptom) {
+          case 'headache':
+            result = severity === 'severe' ? 'You should see a doctor immediately.' : 'Consider taking pain relief medication and rest.';
+            break;
+          case 'cough':
+            result = severity === 'severe' ? 'You should see a doctor immediately.' : 'Drink plenty of fluids and rest.';
+            break;
+            case 'fever':
+                  result = severity === 'severe' ? 'You should see a doctor immediately.' : 'Stay hydrated and rest. Consider taking fever-reducing medication.';
+                  break;
+                case 'stomachache':
+                  result = severity === 'severe' ? 'You should see a doctor immediately.' : 'Avoid solid foods initially and stay hydrated.';
+                  break;
+                case 'nausea':
+                  result = severity === 'severe' ? 'You should see a doctor immediately.' : 'Try to stay hydrated and rest. Avoid strong odors and spicy foods.';
+                  break;
+                case 'sore throat':
+                  result = severity === 'severe' ? 'You should see a doctor immediately.' : 'Gargle with warm salt water and stay hydrated.';
+                  break;
+                case 'chest pain':
+                  result = severity === 'severe' ? 'Seek emergency medical care immediately.' : 'Rest and avoid strenuous activities. If it persists, see a doctor.';
+                  break;
+                case 'shortness of breath':
+                  result = severity === 'severe' ? 'Seek emergency medical care immediately.' : 'Rest and avoid exertion. If it persists, see a doctor.';
+                  break;
+          default:
+            result = 'Please consult a healthcare professional for proper diagnosis and treatment.';
+            break;
+        }
+      } else {
+        result = 'Please enter your symptom and select severity.';
+      }
+
+      document.getElementById('result').innerText = result;
+    });
+
+      document.getElementById('bmiForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const weight = parseFloat(document.getElementById('weight').value);
+        const height = parseFloat(document.getElementById('height').value) / 100;
+        const gender = document.querySelector('input[name="gender"]:checked').value;
+
+        if (weight && height && gender) {
+          const bmi = weight / (height * height);
+          document.getElementById('bmiValue').textContent = bmi.toFixed(2);
+
+          let message;
+          if (bmi < 18.5) {
+            message = "You are underweight.";
+          } else if (bmi < 24.9) {
+            message = "You are normal weight.";
+          } else if (bmi < 29.9) {
+            message = "You are overweight.";
+          } else {
+            message = "You are obese.";
+          }
+          document.getElementById('bmiMessage').textContent = message;
+          document.getElementById('bmiResult').style.display = 'block';
+        }
+      });
+    document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        for (const link of links) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    });
+  </script>
+ </body>
+</html>

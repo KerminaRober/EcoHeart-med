@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Preventive Health</title>
+  <link href="preventive-health.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 35px;
+        top: 50%;
+      }
+
+      .text-box p {
+        font-size: 18px;
+        top: 50%;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+        margin-top: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .icon {
+        font-size: 40px;
+        padding: 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Preventive Health</h1>
+      <p>Learn about preventive healthcare measures, routine screenings, and early detection of diseases.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>Importance of Preventive Health</h2>
+      <p>Preventive health care helps you stay healthy and catch potential issues before they become serious. Regular check-ups and screenings can detect problems early, when they are often easier to treat.</p>
+      <ul>
+        <li><strong>Regular check-ups:</strong> Schedule annual visits to your healthcare provider to monitor your overall health.</li>
+        <li><strong>Vaccinations:</strong> Keep up with recommended vaccines to protect against various diseases.</li>
+        <li><strong>Screenings:</strong> Participate in routine screenings for conditions like high blood pressure, cholesterol, diabetes, and cancer.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Healthy Lifestyle Choices</h2>
+      <p>Making healthy lifestyle choices is a key part of preventive health. Here are some tips to help you live a healthier life:</p>
+      <ul>
+        <li><strong>Balanced diet:</strong> Eat a variety of fruits, vegetables, whole grains, and lean proteins. Limit sugar, salt, and unhealthy fats.</li>
+        <li><strong>Regular exercise:</strong> Aim for at least 150 minutes of moderate aerobic activity or 75 minutes of vigorous activity each week, along with muscle-strengthening exercises on two or more days a week.</li>
+        <li><strong>Healthy weight:</strong> Maintain a healthy weight through diet and exercise to reduce the risk of chronic diseases.</li>
+        <li><strong>Avoid smoking:</strong> If you smoke, seek help to quit. Avoid exposure to secondhand smoke.</li>
+        <li><strong>Limit alcohol:</strong> If you drink alcohol, do so in moderation.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Mental Health and Well-being</h2>
+      <p>Maintaining mental health is just as important as physical health. Here are some ways to support your mental well-being:</p>
+      <ul>
+        <li><strong>Manage stress:</strong> Practice relaxation techniques like deep breathing, meditation, or yoga to manage stress.</li>
+        <li><strong>Stay connected:</strong> Maintain healthy relationships and seek support from friends, family, or mental health professionals.</li>
+        <li><strong>Get enough sleep:</strong> Aim for 7-9 hours of sleep per night to support overall health and well-being.</li>
+        <li><strong>Seek help:</strong> If you’re struggling with mental health issues, don’t hesitate to seek help from a mental health professional.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

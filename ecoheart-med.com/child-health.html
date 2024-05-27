@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Child Health</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Child Health</h1>
+      <p>Access information on childhood illnesses, nutrition, development, and vaccinations.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>Childhood Illnesses</h2>
+      <p>Understanding and managing common childhood illnesses is crucial for your child's health. Here are some important points:</p>
+      <ul>
+        <li><strong>Recognize symptoms:</strong> Learn to identify the symptoms of common illnesses like colds, flu, and ear infections.</li>
+        <li><strong>Seek medical advice:</strong> Consult with your pediatrician if you notice any unusual or severe symptoms.</li>
+        <li><strong>Home care tips:</strong> Follow recommended home care tips to help your child recover quickly.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Nutrition and Diet</h2>
+      <p>Proper nutrition is vital for your child's growth and development. Here are some tips:</p>
+      <ul>
+        <li><strong>Balanced diet:</strong> Ensure your child consumes a variety of fruits, vegetables, whole grains, proteins, and healthy fats.</li>
+        <li><strong>Limit sugar and processed foods:</strong> Encourage healthy eating habits by limiting sugary snacks and processed foods.</li>
+        <li><strong>Stay hydrated:</strong> Make sure your child drinks plenty of water throughout the day.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Development Milestones</h2>
+      <p>Tracking your child's development is important to ensure they are growing and developing appropriately. Here are some key points:</p>
+      <ul>
+        <li><strong>Understand milestones:</strong> Familiarize yourself with developmental milestones for different ages.</li>
+        <li><strong>Encourage development:</strong> Engage in activities that promote physical, cognitive, and emotional development.</li>
+        <li><strong>Consult professionals:</strong> Seek advice from healthcare professionals if you have any concerns about your child's development.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Vaccinations</h2>
+      <p>Vaccinations are essential to protect your child from various diseases. Here are some important considerations:</p>
+      <ul>
+        <li><strong>Follow the schedule:</strong> Ensure your child receives all recommended vaccinations according to the schedule.</li>
+        <li><strong>Stay informed:</strong> Keep yourself updated on the latest vaccine recommendations and guidelines.</li>
+        <li><strong>Consult your pediatrician:</strong> Discuss any concerns or questions about vaccinations with your pediatrician.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoHeart - Common Diseases and Conditions</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #EFF5F7;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    nav {
+      display: flex;
+      padding: 1% 4%;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      font-size: 35px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .d-name {
+      text-align: center;
+      font-size: 4em;
+      color: #11257B;
+      font-family: "Playfair Display", serif;
+      margin: 30px 0;
+      text-decoration: underline;
+    }
+
+    .section-content {
+      padding: 0 10%;
+    }
+
+    .section-content h2 {
+      font-size: 3em;
+      margin: 20px 0;
+      font-family: "Playfair Display", serif;
+      color: #1A33A6;
+    }
+
+    .section-content p {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+
+    .overview {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .overview img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    .overview-text {
+      flex: 1;
+      padding: 20px;
+      word-spacing: 1px;
+    }
+
+    .overview img {
+      flex: 1;
+      max-width: 40%;
+      margin: 0 20px;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 40px;
+      margin: 20px 0;
+    }
+
+    ul li {
+      font-size: 1.3em;
+      margin: 10px 0;
+    }
+
+    .text {
+      flex: 1;
+      padding: 20px;
+      max-width: 67%;
+      word-spacing: 1px;
+    }
+
+    h3 {
+      font-size: 30px;
+    }
+
+    iframe {
+      border-radius: 15px;
+      padding: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #11257B;
+      font-size: 20px;
+      padding: 20px;
+    }
+
+    hr {
+      width: 70%;
+      border-width: 3px;
+      border: 2px solid #11257B;
+      margin: 50px auto;
+    }
+
+    .overview iframe {
+      max-width: 450px;
+      height: 300px;
+      border-radius: 15px;
+    }
+    img{
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      html, body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+      }
+
+      .text-box h1 {
+        font-size: 35px;
+      }
+
+      .text-box p {
+        font-size: 1em;
+      }
+
+      nav a h2 {
+        font-size: 25px;
+      }
+
+      .d-name {
+        font-size: 2.5em;
+      }
+
+      .section-content {
+        padding: 0 5%;
+      }
+
+      .section-content h2 {
+        font-size: 2em;
+      }
+
+      .overview {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9em;
+      }
+
+      .overview img {
+        max-width: 80%;
+        margin: 20px 0;
+      }
+
+      .overview iframe {
+        width: 300px;
+        min-height: 200px;
+        height: auto;
+      }
+
+      .text {
+        font-size: 0.9em;
+        padding: 10px;
+        width: 100%;
+        max-width: 90%;
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      .section-content iframe {
+        width: 300px;
+        height: 200px;
+      }
+      .hypertension img{
+        max-width: 95%;
+        height: auto;
+        margin: 20px 0;
+      }
+      h3 {
+        font-size: 25px;
+      }
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>
+    </nav>
+    <div class="text-box">
+      <h1>Common Diseases and Conditions</h1>
+      <p>Stay informed with our latest insights and articles covering a wide range of health topics, from wellness tips to medical breakthroughs.</p>
+    </div>
+  </section>
+
+  <section class="diabetes section-content">
+    <h1 class="d-name">Diabetes</h1>
+    
+    <h2>Overview</h2>
+    <div class="overview">
+      <div class="overview-text">
+        <p>Diabetes mellitus is a group of diseases that affect how the body uses glucose, a key energy source for muscles, tissues, and the brain. Regardless of the type, diabetes results in excess blood sugar, leading to serious health issues. Chronic forms include type 1 and type 2 diabetes. Potentially reversible forms include prediabetes, where blood sugar is elevated but not high enough to be diabetes, and gestational diabetes, which occurs during pregnancy and may resolve after childbirth.</p>
+      </div>
+      <img src="https://th.bing.com/th/id/OIP.dyRpNxBB_AFjiyqkS1u6bAHaFG?w=1353&h=933&rs=1&pid=ImgDetMain" alt="Diabetes">
+    </div>
+    <h2>Symptoms</h2>
+    <div class="text">
+    <p>Diabetes symptoms depend on how high your blood sugar is. Some people, especially if they have prediabetes, gestational diabetes or type 2 diabetes, may not have symptoms. In type 1 diabetes, symptoms tend to come on quickly and be more severe.</p>
+    <p>Some of the symptoms of type 1 diabetes and type 2 diabetes are:</p>
+    <ul>
+      <li>Feeling more thirsty than usual.</li>
+      <li>Urinating often.</li>
+      <li>Losing weight without trying.</li>
+      <li>Presence of ketones in the urine. Ketones are a byproduct of the breakdown of muscle and fat that happens when there's not enough available insulin.</li>
+      <li>Feeling tired and weak.</li>
+      <li>Feeling irritable or having other mood changes.</li>
+      <li>Having blurry vision.</li>
+      <li>Having slow-healing sores.</li>
+      <li>Getting a lot of infections, such as gum, skin and vaginal infections.</li>
+    </ul>
+    </div>
+    <h2>Causes</h2>
+    <div class="text">
+    <p>To understand diabetes, it's important to understand how the body normally uses glucose.</p>
+    <h3>How insulin works</h3>
+    <p>Insulin is a hormone that comes from a gland behind and below the stomach (pancreas).</p>
+    <ul>
+      <li>The pancreas releases insulin into the bloodstream.</li>
+      <li>The insulin circulates, letting sugar enter the cells.</li>
+      <li>Insulin lowers the amount of sugar in the bloodstream.</li>
+      <li>As the blood sugar level drops, so does the secretion of insulin from the pancreas.</li>
+    </ul>
+    <h3>The role of glucose</h3>
+    <p>Glucose — a sugar — is a source of energy for the cells that make up muscles and other tissues.</p>
+    <ul>
+      <li>Glucose comes from two major sources: food and the liver.</li>
+      <li>Sugar is absorbed into the bloodstream, where it enters cells with the help of insulin.
+</li>
+      <li>The liver stores and makes glucose.</li>
+      <li>When glucose levels are low, such as when you haven't eaten in a while, the liver breaks down stored glycogen into glucose. This keeps your glucose level within a typical range.</li>
+    </ul><br>
+    <p>The exact cause of most types of diabetes is unknown. In all cases, sugar builds up in the bloodstream. This is because the pancreas doesn't produce enough insulin. Both type 1 and type 2 diabetes may be caused by a combination of genetic or environmental factors. It is unclear what those factors may be.</p>
+    </div>
+    <h2>Treatment</h2>
+    <iframe width="713" height="401" src="https://www.youtube.com/embed/CwxStExoyGA" title="Ask Mayo Clinic: Diabetes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="text">
+    <p>Depending on what type of diabetes you have, blood sugar monitoring, insulin and oral drugs may be part of your treatment. Eating a healthy diet, staying at a healthy weight and getting regular physical activity also are important parts of managing diabetes.</p>
+    <h3>Treatments for all types of diabetes</h3>
+      <p>An important part of managing diabetes — as well as your overall health — is keeping a healthy weight through a healthy diet and exercise plan:</p>
+      <ul>
+        <li><strong>Healthy eating.</strong> Your diabetes diet is simply a healthy-eating plan that will help you control your blood sugar. You'll need to focus your diet on more fruits, vegetables, lean proteins and whole grains. These are foods that are high in nutrition and fiber and low in fat and calories. You'll also cut down on saturated fats, refined carbohydrates and sweets. In fact, it's the best eating plan for the entire family. Sugary foods are OK once in a while. They must be counted as part of your meal plan.</li>
+        <li><strong>Physical activity.</strong> Everyone needs regular aerobic activity. This includes people who have diabetes. Physical activity lowers your blood sugar level by moving sugar into your cells, where it's used for energy. Physical activity also makes your body more sensitive to insulin. That means your body needs less insulin to transport sugar to your cells.</li>
+      </ul>
+    </div>
+    <a href="https://www.mayoclinic.org/diseases-conditions/diabetes/symptoms-causes/syc-20371444">Know more about diabetes ></a>
+  </section>
+  <hr>
+  <section class="hypertension section-content">
+    <h1 class="d-name">Hypertension (High Blood Pressure)</h1>
+
+    <h2>Overview</h2>
+    <div class="overview">
+      <div class="overview-text">
+        <p>Hypertension, also known as high blood pressure, is a condition in which the force of the blood against the artery walls is too high. Over time, high blood pressure can lead to serious health problems, such as heart disease, stroke, and kidney disease. Hypertension is often called the "silent killer" because it typically has no symptoms until it has caused significant damage to the heart and arteries.</p>
+      </div>
+      <iframe width="713" height="401" src="https://www.youtube.com/embed/r5XTTeP039Q" title="Mayo Clinic Explains Hypertension" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <h2>Symptoms</h2>
+    <div class="text">
+      <p>Most people with high blood pressure have no symptoms, even if blood pressure readings reach dangerously high levels. You can have high blood pressure for years without any symptoms.<br><br>A few people with high blood pressure may have:</p>
+      <ul>
+        <li>Headaches</li>
+        <li>Shortness of breath</li>
+        <li>Nosebleeds</li>
+      </ul><br>
+      <p>However, these symptoms aren't specific. They usually don't occur until high blood pressure has reached a severe or life-threatening stage.</p>
+      <h4>More information</h4>
+      <a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/expert-answers/pulse-pressure/faq-20058189" style="text-decoration: underline;">Pulse pressure: An indicator of heart health?</a>
+    </div>
+    <h2>Causes</h2>
+    <div class="text">
+      <p>Blood pressure is determined by two things: the amount of blood the heart pumps and how hard it is for the blood to move through the arteries. The more blood the heart pumps and the narrower the arteries, the higher the blood pressure.<br><br>There are two main types of high blood pressure.</p>
+      <p><strong>Primary hypertension, also called essential hypertension</strong><br>
+      For most adults, there's no identifiable cause of high blood pressure. This type of high blood pressure is called primary hypertension or essential hypertension. It tends to develop gradually over many years. Plaque buildup in the arteries, called atherosclerosis, increases the risk of high blood pressure.<br><br>
+
+      <strong>Secondary hypertension</strong><br>
+      This type of high blood pressure is caused by an underlying condition. It tends to appear suddenly and cause higher blood pressure than does primary hypertension. Conditions and medicines that can lead to secondary hypertension include:</p>
+      <ul>
+        <li>Adrenal gland tumors</li>
+        <li>Blood vessel problems present at birth, also called congenital heart defects</li>
+        <li>Cough and cold medicines, some pain relievers, birth control pills, and other prescription drugs</li>
+        <li>Illegal drugs, such as cocaine and amphetamines</li>
+        <li>Kidney disease</li>
+        <li>Obstructive sleep apnea</li>
+        <li>Thyroid problems</li>
+      </ul><br>
+      <p>Sometimes just getting a health checkup causes blood pressure to increase. This is called white coat hypertension.</p>
+      <h4>More information</h4>
+      <a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/in-depth/blood-pressure/art-20045245" style="text-decoration: underline;">Medications and supplements that can raise your blood pressure</a><br><br>
+       <a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/expert-answers/anxiety/faq-20058549" style="text-decoration: underline;">Anxiety: A cause of high blood pressure?</a><br><br>
+      <a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/expert-answers/blood-pressure/faq-20057853" style="text-decoration: underline;">Blood pressure readings: Why higher at home?</a><br><br>
+      <a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/expert-answers/blood-pressure/faq-20058115" style="text-decoration: underline;">Blood pressure: Does it have a daily pattern?</a><br><br>
+      <iframe width="746" height="420" src="https://www.youtube.com/embed/NMuzXbyu7YY" title="How can I lower my blood pressure without medication? Ask Mayo Clinic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p style="color: grey; font-size: 1.1em;"><strong>Hypertension FAQs</strong><br>
+      Leslie Thomas, M.D., a nephrologist at Mayo Clinic, answers the important questions you may have about hypertension (high blood pressure).</p>
+    </div>
+    
+    <h2>Treatment</h2>
+    <div class="text">
+      <p>Changing your lifestyle can help control and manage high blood pressure. Your health care provider may recommend that you make lifestyle changes including:</p>
+      <ul>
+        <li>Eating a heart-healthy diet with less salt</li>
+        <li>Getting regular physical activity</li>
+        <li>Maintaining a healthy weight or losing weight</li>
+        <li>Limiting alcohol</li>
+        <li>Not smoking</li>
+        <li>Getting 7 to 9 hours of sleep daily</li>
+      </ul><br>
+      <p>Sometimes lifestyle changes aren't enough to treat high blood pressure. If they don't help, your provider may recommend medicine to lower your blood pressure.</p>
+      <a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/symptoms-causes/syc-20373410">Know more about Hypertension ></a>
+    </div>
+  </section>
+  
+  <hr>
+
+  <!-- Asthma Section -->
+  <section class="asthma section-content">
+    <h1 class="d-name">Asthma</h1>
+
+    <h2>Overview</h2>
+    <div class="overview">
+      <div class="overview-text">
+        <p>Asthma is a condition in which your airways narrow and swell and may produce extra mucus. This can make breathing difficult and trigger coughing, wheezing, and shortness of breath. For some people, asthma is a minor nuisance. For others, it can be a major problem that interferes with daily activities and may lead to a life-threatening asthma attack.</p>
+      </div>
+      <img src="https://th.bing.com/th/id/OIP.WTvtXLgG__sSjh-63lfovAHaE8?rs=1&pid=ImgDetMain" width="350px" height="250px" alt="Asthma">
+    </div>
+    <h2>Symptoms</h2>
+    <div class="text">
+      <p>Asthma symptoms vary from person to person. You may have infrequent asthma attacks, have symptoms only at certain times — such as when exercising — or have symptoms all the time.</p>
+      <p>Asthma signs and symptoms include:</p>
+      <ul>
+        <li>Shortness of breath</li>
+        <li>Chest tightness or pain</li>
+        <li>Wheezing when exhaling, which is a common sign of asthma in children</li>
+        <li>Trouble sleeping caused by shortness of breath, coughing, or wheezing</li>
+        <li>Coughing or wheezing attacks that are worsened by a respiratory virus, such as a cold or the flu</li>
+      </ul>
+    </div>
+    <h2>Causes</h2>
+    <div class="text">
+      <p>It isn't clear why some people get asthma and others don't, but it's probably due to a combination of environmental and genetic factors.</p>
+      <h3>Asthma triggers</h3>
+      <p>Exposure to various irritants and substances that trigger allergies (allergens) can trigger signs and symptoms of asthma. Asthma triggers are different from person to person and can include:</p>
+      <ul>
+        <li>Airborne allergens, such as pollen, dust mites, mold spores, pet dander, or particles of cockroach waste</li>
+        <li>Respiratory infections, such as the common cold</li>
+        <li>Physical activity (exercise-induced asthma)</li>
+        <li>Cold air</li>
+        <li>Air pollutants and irritants, such as smoke</li>
+        <li>Certain medications, including beta blockers, aspirin, and NSAIDs</li>
+        <li>Strong emotions and stress</li>
+        <li>Sulfites and preservatives added to some types of foods and beverages, including shrimp, dried fruit, processed potatoes, beer, and wine</li>
+        <li>Gastroesophageal reflux disease (GERD), a condition in which stomach acids back up into your throat</li>
+      </ul>
+    </div>
+    <h2>Treatment</h2>
+    <div class="text">
+      <p>Prevention and long-term control are key in stopping asthma attacks before they start. Treatment usually involves learning to recognize your triggers, taking steps to avoid them, and tracking your breathing to make sure your daily asthma medications are keeping symptoms under control. In case of an asthma flare-up, you may need to use a quick-relief inhaler, such as albuterol.</p>
+      <h3>Medications for asthma</h3>
+      <p>Long-term asthma control medications, generally taken daily, are the cornerstone of asthma treatment. These medications keep asthma under control on a day-to-day basis and make it less likely you'll have an asthma attack. Types of long-term control medications include:</p>
+      <ul>
+        <li>Inhaled corticosteroids</li>
+        <li>Leukotriene modifiers</li>
+        <li>Long-acting beta agonists (LABAs)</li>
+        <li>Theophylline</li>
+      </ul>
+      <p>Quick-relief (rescue) medications are used as needed for rapid, short-term symptom relief during an asthma attack. These include:</p>
+      <ul>
+        <li>Short-acting beta agonists</li>
+        <li>Anticholinergic agents</li>
+        <li>Oral and intravenous corticosteroids</li>
+      </ul>
+    </div>
+    <a href="https://www.mayoclinic.org/diseases-conditions/asthma/symptoms-causes/syc-20369653">Know more about asthma ></a>
+  </section>
+
+  <hr>
+
+  <!-- COPD Section -->
+  <section class="copd section-content">
+    <h1 class="d-name">COPD (Chronic Obstructive Pulmonary Disease)</h1>
+
+    <h2>Overview</h2>
+    <div class="overview">
+      <div class="overview-text">
+        <p>Chronic obstructive pulmonary disease (COPD) is a chronic inflammatory lung disease that causes obstructed airflow from the lungs. Symptoms include breathing difficulty, cough, mucus (sputum) production, and wheezing. It's typically caused by long-term exposure to irritating gases or particulate matter, most often from cigarette smoke.</p>
+      </div>
+      <img src="https://superdealsfinder.com/wp-content/uploads/2021/01/COPD-IH-8001-image-1024x576.jpg" alt="COPD">
+    </div>
+    <h2>Symptoms</h2>
+    <div class="text">
+      <p>Symptoms of COPD often don't appear until significant lung damage has occurred, and they usually worsen over time, particularly if smoking exposure continues. Signs and symptoms of COPD may include:</p>
+      <ul>
+        <li>Shortness of breath, especially during physical activities</li>
+        <li>Wheezing</li>
+        <li>Chest tightness</li>
+        <li>Having to clear your throat first thing in the morning, due to excess mucus in your lungs</li>
+        <li>A chronic cough that may produce mucus (sputum) that may be clear, white, yellow, or greenish</li>
+        <li>Blueness of the lips or fingernail beds (cyanosis)</li>
+        <li>Frequent respiratory infections</li>
+        <li>Lack of energy</li>
+        <li>Unintended weight loss (in later stages)</li>
+        <li>Swelling in ankles, feet, or legs</li>
+      </ul>
+    </div>
+    <h2>Causes</h2>
+    <div class="text">
+      <p>The main cause of COPD in developed countries is tobacco smoking. In developing countries, COPD often occurs in people exposed to fumes from burning fuel for cooking and heating in poorly ventilated homes. Only about 20% to 30% of chronic smokers may develop clinically apparent COPD, although many smokers with long smoking histories may develop reduced lung function.</p>
+      <h3>Risk factors</h3>
+      <ul>
+        <li>Exposure to tobacco smoke</li>
+        <li>People with asthma who smoke</li>
+        <li>Occupational exposure to dusts and chemicals</li>
+        <li>Exposure to fumes from burning fuel</li>
+        <li>Genetics</li>
+      </ul>
+    </div>
+    <h2>Treatment</h2>
+    <div class="treatment">
+      <div class="treatment-text">
+        <h3>Medications for COPD</h3>
+        <p>Several types of medications are used to treat the symptoms and complications of COPD. Some medications reduce symptoms and some prevent flare-ups. Types of medications include:</p>
+        <ul>
+          <li>Bronchodilators</li>
+          <li>Inhaled steroids</li>
+          <li>Combination inhalers</li>
+          <li>Oral steroids</li>
+          <li>Phosphodiesterase-4 inhibitors</li>
+          <li>Theophylline</li>
+          <li>Antibiotics</li>
+        </ul>
+      </div>
+    </div>
+    <a href="https://www.mayoclinic.org/diseases-conditions/copd/symptoms-causes/syc-20353679">Know more about COPD ></a>
+    </section>
+    <hr>
+
+    <!-- Flu (Influenza) Section -->
+    <section class="flu section-content">
+        <h1 class="d-name">Flu (Influenza)</h1>
+
+        <h2>Overview</h2>
+        <div class="overview">
+            <div class="overview-text">
+                <p>Influenza (flu) is a viral infection that attacks your respiratory system — your nose, throat, and lungs. Influenza is commonly called the flu, but it's not the same as stomach "flu" viruses that cause diarrhea and vomiting.</p>
+            </div>
+            <img src="https://agesandstagespediatricgroup.com/wp-content/uploads/2019/09/FLu.jpg" alt="Flu (Influenza)">
+        </div>
+        <h2>Symptoms</h2>
+        <div class="text">
+            <p>Initially, the flu may seem like a common cold with a runny nose, sneezing, and sore throat. But colds usually develop slowly, whereas the flu tends to come on suddenly. Common signs and symptoms of the flu include:</p>
+            <ul>
+                <li>Fever over 100.4 F (38 C)</li>
+                <li>Aching muscles</li>
+                <li>Chills and sweats</li>
+                <li>Headache</li>
+                <li>Dry, persistent cough</li>
+                <li>Fatigue and weakness</li>
+                <li>Nasal congestion</li>
+                <li>Sore throat</li>
+            </ul>
+        </div>
+        <h2>Causes</h2>
+        <div class="text">
+            <p>Influenza viruses travel through the air in droplets when someone with the infection coughs, sneezes, or talks. You can inhale the droplets directly, or you can pick up the germs from an object — such as a telephone or computer keyboard — and then transfer them to your eyes, nose, or mouth.</p>
+            <h3>Risk factors</h3>
+            <ul>
+                <li>Age</li>
+                <li>Living conditions</li>
+                <li>Weakened immune system</li>
+                <li>Chronic illnesses</li>
+                <li>Pregnancy</li>
+            </ul>
+        </div>
+        <h2>Treatment</h2>
+        <div class="treatment">
+            <div class="treatment-text">
+                <h3>Medications for Flu</h3>
+                <p>Usually, you'll need nothing more than bed rest and plenty of fluids to treat the flu. But if you have a severe infection or are at higher risk for complications, your doctor may prescribe an antiviral medication. Examples include:</p>
+                <ul>
+                    <li>Oseltamivir (Tamiflu)</li>
+                    <li>Zanamivir (Relenza)</li>
+                    <li>Peramivir (Rapivab)</li>
+                    <li>Baloxavir marboxil (Xofluza)</li>
+                </ul>
+            </div>
+            <img src="https://answers.childrenshospital.org/wp-content/uploads/2019/05/AdobeStock_86931915-vial-1-768x549.jpeg" width="480px" height="300px" alt="Treatment Options for Flu">
+        </div>
+        <a href="https://www.mayoclinic.org/diseases-conditions/flu/symptoms-causes/syc-20351719">Know more about Flu ></a>
+  </section>
+
+  <hr>
+
+  <!-- Colds Section -->
+  <section class="colds section-content">
+      <h1 class="d-name">Colds</h1>
+
+      <h2>Overview</h2>
+      <div class="overview">
+          <div class="overview-text">
+              <p>The common cold is a viral infection of your nose and throat (upper respiratory tract). It's usually harmless, although it might not feel that way. Many types of viruses can cause a common cold.</p>
+          </div>
+          <img src="https://th.bing.com/th/id/OIP.DKnik4myTf-c5__PKTKeyAHaE6?rs=1&pid=ImgDetMain" alt="Common Cold">
+      </div>
+      <h2>Symptoms</h2>
+      <div class="text">
+          <p>Symptoms of a common cold usually appear one to three days after exposure to a cold-causing virus. Signs and symptoms, which can vary from person to person, might include:</p>
+          <ul>
+              <li>Runny or stuffy nose</li>
+              <li>Sore throat</li>
+              <li>Cough</li>
+              <li>Congestion</li>
+              <li>Slight body aches or a mild headache</li>
+              <li>Sneezing</li>
+              <li>Low-grade fever</li>
+              <li>Generally feeling unwell (malaise)</li>
+          </ul>
+      </div>
+      <h2>Causes</h2>
+      <div class="text">
+          <p>Although many types of viruses can cause a common cold, rhinoviruses are the most common culprit. A cold virus enters your body through your mouth, eyes, or nose. The virus can spread through droplets in the air when someone who is sick coughs, sneezes, or talks. It also spreads by hand-to-hand contact with someone who has a cold or by sharing contaminated objects, such as utensils, towels, toys, or telephones.</p>
+      </div>
+      <h2>Treatment</h2>
+      <div class="treatment">
+          <div class="treatment-text">
+              <h3>Medications for Colds</h3>
+              <p>There's no cure for the common cold. However, to ease your symptoms, you might try:</p>
+              <ul>
+                  <li>Over-the-counter cold remedies</li>
+                  <li>Rest and fluid intake</li>
+                  <li>Saline nasal drops and sprays</li>
+                  <li>Chicken soup</li>
+                  <li>Humidity</li>
+              </ul>
+          </div>
+      </div>
+      <a href="https://www.mayoclinic.org/diseases-conditions/common-cold/symptoms-causes/syc-20351605">Know more about Colds ></a>
+  </section>
+
+</body>
+
+</html>

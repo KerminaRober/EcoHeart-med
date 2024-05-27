@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Women’s Health</title>
+  <link href="womens-health.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+        margin-top: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .icon {
+        font-size: 40px;
+        padding: 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Women’s Health</h1>
+      <p>Get information on reproductive health, pregnancy, menopause, and overall wellness for women.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>Reproductive Health</h2>
+      <p>Understanding and managing reproductive health is crucial for women. Here are some key points:</p>
+      <ul>
+        <li><strong>Regular check-ups:</strong> Visit your gynecologist for regular screenings and check-ups to maintain reproductive health.</li>
+        <li><strong>Contraception:</strong> Learn about different contraceptive methods and choose the one that best suits your needs.</li>
+        <li><strong>Fertility:</strong> Understand your menstrual cycle and fertility to plan for pregnancy when you’re ready.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Pregnancy</h2>
+      <p>Pregnancy is a significant phase in a woman’s life. Here are some tips for a healthy pregnancy:</p>
+      <ul>
+        <li><strong>Prenatal care:</strong> Regular prenatal visits are essential for monitoring the health of both mother and baby.</li>
+        <li><strong>Nutrition:</strong> Eat a balanced diet rich in vitamins and minerals, and avoid harmful substances like alcohol and tobacco.</li>
+        <li><strong>Exercise:</strong> Engage in moderate exercise, such as walking or prenatal yoga, to stay fit and healthy during pregnancy.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Menopause</h2>
+      <p>Menopause is a natural phase in a woman’s life. Here are some tips to manage it effectively:</p>
+      <ul>
+        <li><strong>Healthy lifestyle:</strong> Maintain a balanced diet and regular exercise to manage menopause symptoms.</li>
+        <li><strong>Medical advice:</strong> Consult your doctor for advice on managing symptoms such as hot flashes, night sweats, and mood swings.</li>
+        <li><strong>Mental health:</strong> Seek support for mental well-being, as hormonal changes can affect mood and emotions.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Overall Wellness</h2>
+      <p>Overall wellness encompasses physical, mental, and emotional health. Here are some tips:</p>
+      <ul>
+        <li><strong>Regular exercise:</strong> Engage in physical activities like walking, running, yoga, or pilates to stay fit.</li>
+        <li><strong>Balanced diet:</strong> Eat a nutritious diet that includes a variety of foods from all food groups.</li>
+        <li><strong>Mental health:</strong> Practice stress management techniques such as mindfulness, meditation, or therapy.</li>
+        <li><strong>Regular screenings:</strong> Stay up-to-date with health screenings like mammograms, pap smears, and bone density tests.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>

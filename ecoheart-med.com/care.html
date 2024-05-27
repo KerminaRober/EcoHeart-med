@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>EcoHeart - Preventive Care and Screenings</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    .profile, .appointments, .records, .messages, .book-appointment, .compose-message {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a:hover, .nav-tabs a.active-tab {
+      background: #004080;
+      transition: 0.3s;
+    }
+
+    .btn {
+      background-color: #002359;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #004080;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .icon {
+        font-size: 40px;
+        padding: 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Preventive Care and Screenings</h1>
+      <p>Ensuring early detection and prevention for a healthier life.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content">
+      <h2>What is Preventive Care?</h2>
+      <p>Preventive care involves measures taken to prevent diseases, rather than treating them after they occur. It includes a variety of healthcare services such as screenings, check-ups, and patient counseling to prevent illnesses, disease, or other health problems.</p>
+      <p>Regular preventive care can help catch potential health issues early, improving the chances of successful treatment and reducing the risk of serious complications.</p>
+    </div>
+
+    <div class="content">
+      <h2>Importance of Screenings</h2>
+      <p>Health screenings are crucial for early detection of diseases. By identifying conditions such as diabetes, cancer, and heart disease early on, treatment can begin sooner, which generally leads to better outcomes.</p>
+      <p>Common health screenings include:</p>
+      <ul>
+        <li><strong>Blood Pressure Screening:</strong> Regular checks can detect hypertension, a risk factor for heart disease and stroke.</li>
+        <li><strong>Cholesterol Tests:</strong> Helps identify risk for cardiovascular disease.</li>
+        <li><strong>Diabetes Screening:</strong> Early detection of high blood sugar levels can prevent complications.</li>
+        <li><strong>Cancer Screenings:</strong> Tests such as mammograms, Pap smears, and colonoscopies can detect cancers at an early, more treatable stage.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Healthy Lifestyle Choices</h2>
+      <p>In addition to screenings, adopting a healthy lifestyle is a critical component of preventive care. This includes:</p>
+      <ul>
+        <li><strong>Eating a balanced diet:</strong> Focus on fruits, vegetables, whole grains, and lean proteins.</li>
+        <li><strong>Staying physically active:</strong> Aim for at least 150 minutes of moderate exercise per week.</li>
+        <li><strong>Avoiding tobacco and limiting alcohol:</strong> These can reduce the risk of many chronic diseases.</li>
+        <li><strong>Maintaining a healthy weight:</strong> Reduces the risk of conditions such as diabetes, heart disease, and certain cancers.</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h2>Regular Check-ups and Vaccinations</h2>
+      <p>Regular check-ups with your healthcare provider are essential for preventive care. During these visits, your provider can:</p>
+      <ul>
+        <li>Update vaccinations to protect against diseases such as influenza, pneumonia, and hepatitis.</li>
+        <li>Monitor vital signs and conduct necessary screenings.</li>
+        <li>Provide counseling on healthy lifestyle choices and preventive measures.</li>
+      </ul>
+      <p>Vaccinations are a critical part of preventive care, protecting you and those around you from various diseases.</p>
+    </div>
+  </div>
+</body>
+</html>

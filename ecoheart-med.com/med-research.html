@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+* {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    .profile, .appointments, .records, .messages, .book-appointment, .compose-message {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a:hover, .nav-tabs a.active-tab {
+      background: #004080;
+      transition: 0.3s;
+    }
+
+    .btn {
+      background-color: #002359;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #004080;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .icon {
+        font-size: 40px;
+        padding: 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+      <nav> 
+        <a href="ecoheart.html" id="eco">
+          <h2>EcoHeart</h2>
+        </a>  
+      </nav>
+      <div class="text-box">
+        <h1>Latest Medical Research and Innovations</h1>
+        <p>Stay updated with the groundbreaking advancements in medical science and technology.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="content">
+        <h2>Breakthroughs in Genetics</h2>
+        <p>Genetic research has seen remarkable advancements, particularly in understanding the human genome and its implications for health. The development of CRISPR-Cas9 technology allows for precise gene editing, offering potential treatments for genetic disorders like cystic fibrosis and sickle cell anemia. Recent studies are also exploring gene therapy's role in combating cancer by targeting cancer cells at the molecular level.</p>
+      </div>
+
+      <div class="content">
+        <h2>Advances in Immunotherapy</h2>
+        <p>Immunotherapy is transforming cancer treatment by harnessing the body's immune system to fight cancer cells. Innovations include checkpoint inhibitors, CAR-T cell therapy, and cancer vaccines. These treatments have shown significant promise in treating various cancers, including melanoma, lymphoma, and certain types of leukemia.</p>
+      </div>
+
+      <div class="content">
+        <h2>Artificial Intelligence in Medicine</h2>
+        <p>Artificial Intelligence (AI) is revolutionizing healthcare by improving diagnostic accuracy, predicting patient outcomes, and personalizing treatment plans. AI algorithms analyze large datasets to identify patterns and make predictions, aiding in early disease detection and management. AI applications range from radiology and pathology to predicting outbreaks of infectious diseases.</p>
+      </div>
+
+      <div class="content">
+        <h2>Telemedicine and Digital Health</h2>
+        <p>Telemedicine has become a critical component of healthcare, especially during the COVID-19 pandemic. It allows patients to consult with healthcare providers remotely, increasing access to medical care and reducing the need for in-person visits. Digital health technologies, including wearable devices and mobile health apps, enable continuous health monitoring and management, empowering patients to take charge of their health.</p>
+      </div>
+
+      <div class="content">
+        <h2>Regenerative Medicine</h2>
+        <p>Regenerative medicine aims to repair or replace damaged tissues and organs using stem cells, tissue engineering, and biomaterials. Significant progress has been made in developing lab-grown organs and tissues for transplantation. Researchers are also exploring the use of stem cells to treat conditions such as Parkinson's disease, spinal cord injuries, and heart disease.</p>
+      </div>
+
+      <div class="content">
+        <h2>Vaccines and Infectious Disease Research</h2>
+        <p>The rapid development of COVID-19 vaccines demonstrated the potential of mRNA technology, which could be applied to other infectious diseases. Ongoing research is focused on creating vaccines for diseases like HIV, malaria, and influenza. Scientists are also investigating antiviral drugs and monoclonal antibodies to enhance the treatment of viral infections.</p>
+      </div>
+
+      <div class="content">
+        <h2>Nanotechnology in Medicine</h2>
+        <p>Nanotechnology involves manipulating matter at the nanoscale to create materials and devices with unique properties. In medicine, nanotechnology is used for targeted drug delivery, allowing medications to reach specific cells or tissues, minimizing side effects. Researchers are also developing nanoscale diagnostic tools for early disease detection and monitoring.</p>
+      </div>
+
+      <div class="content">
+        <h2>Personalized Medicine</h2>
+        <p>Personalized medicine tailors medical treatment to individual characteristics, such as genetics, lifestyle, and environment. This approach ensures that patients receive the most effective therapies with the least risk of adverse effects. Advances in genomic sequencing and biomarker identification are driving the growth of personalized medicine, particularly in oncology.</p>
+      </div>
+    </div>
+  </body>
+  </html>

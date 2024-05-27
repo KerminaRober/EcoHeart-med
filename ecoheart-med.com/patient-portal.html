@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoHeart - Patient Portal</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 30px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .profile, .appointments, .records, .messages, .book-appointment, .compose-message {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #333;
+      padding: 10px;
+      border-radius: 5px;
+      flex-wrap: wrap;
+    }
+
+    .nav-tabs a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 5px;
+      flex: 1 0 45%;
+      text-align: center;
+    }
+
+    .nav-tabs a:hover, .nav-tabs a.active-tab {
+      background: #004080;
+      transition: 0.3s;
+    }
+
+    .btn {
+      background-color: #002359;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #004080;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .nav-links {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .nav-links ul li {
+        display: block;
+        margin: 5px 0;
+      }
+
+      .text-box h1 {
+        font-size: 35px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      .content {
+        padding: 15px;
+      }
+
+      .nav-tabs a {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="header">
+    <nav> 
+      <a href="ecoheart.html" id="eco">
+        <h2>EcoHeart</h2>
+      </a>  
+    </nav>
+    <div class="text-box">
+      <h1>Patient Portal</h1>
+      <p>Manage Your Health with Ease and Convenience</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="nav-tabs">
+      <a href="#" id="profileLink" class="active-tab">Profile</a>
+      <a href="#" id="appointmentsLink">Appointments</a>
+      <a href="#" id="recordsLink">Health Records</a>
+      <a href="#" id="messagesLink">Messages</a>
+    </div>
+
+    <div class="content profile active">
+      <h2>Your Profile</h2>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Date of Birth:</strong> January 1, 1980</p>
+      <p><strong>Contact Information:</strong> (123) 456-7890, john.doe@example.com</p>
+      <p><strong>Address:</strong> 123 Main Street, Anytown, USA</p><br>
+      <h3>Emergency Contacts</h3>
+      <p><strong>Jane Doe:</strong> (123) 555-6789</p><br>
+      <h3>Insurance Information</h3>
+      <p><strong>Provider:</strong> Health Insurance Inc.</p>
+      <p><strong>Policy Number:</strong> H123456789</p>
+    </div>
+
+    <div class="content appointments">
+      <h2>Your Appointments</h2>
+      <h3>Upcoming Appointments</h3>
+      <p>Dr. Smith, May 25, 2024, 10:00 AM</p>
+      <h3>Past Appointments</h3>
+      <p>Dr. Brown, April 15, 2024, 2:00 PM - General Checkup</p>
+      <h3>Schedule a New Appointment</h3>
+      <a href="#" id="bookAppointmentButton" class="btn">Book an Appointment</a>
+    </div>
+
+    <div class="content book-appointment">
+      <h2>Book a New Appointment</h2>
+      <form id="appointmentForm">
+        <label for="doctor">Choose a Doctor:</label>
+        <select id="doctor" name="doctor">
+          <option value="Dr. Smith">Dr. Smith</option>
+          <option value="Dr. Brown">Dr. Brown</option>
+        </select><br><br>
+        <label for="date">Choose a Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <label for="time">Choose a Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+        <input type="submit" value="Book Appointment">
+      </form>
+    </div>
+
+    <div class="content records">
+      <h2>Your Health Records</h2>
+      <h3>Medical History</h3>
+      <p>Hypertension, Diagnosed in 2010</p>
+      <h3>Lab Results</h3>
+      <p>Blood Test, April 10, 2024: Normal</p>
+      <h3>Medications</h3>
+      <p>Lisinopril, 10mg, Daily</p>
+      <h3>Immunizations</h3>
+      <p>COVID-19 Vaccine, Completed in 2021</p>
+      <h3>Allergies</h3>
+      <p>Penicillin</p>
+    </div>
+    <div class="content messages">
+      <h2>Your Messages</h2>
+      <h3>Inbox</h3>
+      <p>Message from Dr. Smith: "Your test results are normal. Keep up with your current medication."</p>
+      <h3>Send a New Message</h3>
+      <a href="#" id="composeMessageButton" class="btn">Compose Message</a>
+    </div>
+
+    <div class="content compose-message">
+      <h2>Send a New Message</h2>
+      <form id="messageForm">
+        <label for="recipient">Recipient:</label>
+        <input type="text" id="recipient" name="recipient" required><br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <input type="submit" value="Send Message">
+        <input type="reset" value="Reset Message">
+      </form>
+    </div>
+    </div>
+
+    <script>
+    document.getElementById('profileLink').addEventListener('click', function() {
+      showSection('profile');
+      setActiveTab('profileLink');
+    });
+
+    document.getElementById('appointmentsLink').addEventListener('click', function() {
+      showSection('appointments');
+      setActiveTab('appointmentsLink');
+    });
+
+    document.getElementById('recordsLink').addEventListener('click', function() {
+      showSection('records');
+      setActiveTab('recordsLink');
+    });
+
+    document.getElementById('messagesLink').addEventListener('click', function() {
+      showSection('messages');
+      setActiveTab('messagesLink');
+    });
+
+    document.getElementById('bookAppointmentButton').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default anchor action
+      showSection('book-appointment');
+      setActiveTab(null);
+    });
+
+    document.getElementById('composeMessageButton').addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default anchor action
+      showSection('compose-message');
+      setActiveTab(null);
+    });
+
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Appointment booked successfully!');
+      showSection('appointments');
+      setActiveTab('appointmentsLink');
+    });
+
+    document.getElementById('messageForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Message sent successfully!');
+      showSection('messages');
+      setActiveTab('messagesLink');
+    });
+
+    function showSection(sectionClass) {
+      document.querySelectorAll('.content').forEach(function(content) {
+        content.classList.remove('active');
+      });
+      document.querySelector('.' + sectionClass).classList.add('active');
+    }
+
+    function setActiveTab(tabId) {
+      document.querySelectorAll('.nav-tabs a').forEach(function(tab) {
+        tab.classList.remove('active-tab');
+      });
+      if (tabId) {
+        document.getElementById(tabId).classList.add('active-tab');
+      }
+    }
+    </script>
+    </body>
+
+    </html>

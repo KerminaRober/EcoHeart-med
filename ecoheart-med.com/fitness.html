@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness and Exercise Guides</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #EFF5F7;
+      overflow-x: hidden;
+    }
+
+    .header {
+      min-height: 60vh;
+      width: 100%;
+      background-image: linear-gradient(to right, #11257B, #2246E7);
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    nav {
+      display: flex;
+      padding: 2% 6%;
+      justify-content: space-between;
+    }
+
+    nav a h2 {
+      width: 150px;
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 35px;
+    }
+
+    .nav-links {
+      flex: 1;
+      text-align: right;
+    }
+
+    .nav-links ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 8px 12px;
+      position: relative;
+    }
+
+    .nav-links ul li a {
+      color: #D2E0F1;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav-links ul li a::after {
+      content: '';
+      width: 0%;
+      height: 2px;
+      background: #D2E0F1;
+      display: block;
+      margin: auto;
+      transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+      width: 100%;
+    }
+
+    .text-box {
+      width: 90%;
+      color: #D2E0F1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .text-box h1 {
+      font-size: 50px;
+      color: #D2E0F1;
+    }
+
+    .text-box p {
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #D2E0F1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content h2 {
+      color: #002359;
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      color: #333;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 20px;
+      list-style-type: disc;
+    }
+
+    .content ul li {
+      margin: 10px 0;
+    }
+
+    .profile, .appointments, .records, .messages, .book-appointment, .compose-message {
+      display: none;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .nav-tabs {
+      display: flex;
+      justify-content: space-around;
+      background: #333;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+
+    .nav-tabs a:hover, .nav-tabs a.active-tab {
+      background: #004080;
+      transition: 0.3s;
+    }
+
+    .btn {
+      background-color: #002359;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background-color: #004080;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    h3 {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 1200px) {
+      .health {
+        flex-basis: 48%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .health-inf {
+        width: 100%;
+        padding-top: 50px;
+      }
+
+      .health {
+        flex-basis: 100%;
+      }
+
+      .header {
+        min-height: 50vh;
+      }
+
+      .text-box h1 {
+        font-size: 30px;
+      }
+
+      .text-box p {
+        font-size: 18px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a h2 {
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .health-inf {
+        padding-top: 30px;
+      }
+
+      .health {
+        padding: 15px 10px;
+      }
+
+      .icon {
+        font-size: 40px;
+        padding: 10px;
+      }
+
+      .text-box h1 {
+        font-size: 25px;
+      }
+
+      .text-box p {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      nav a h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+  <body>
+    <section class="header">
+      <nav> 
+        <a href="ecoheart.html" id="eco">
+          <h2>EcoHeart</h2>
+        </a>  
+      </nav>
+      <div class="text-box">
+        <h1>Fitness and Exercise Guides</h1>
+        <p>Explore workout routines, exercise tips, and fitness strategies to improve physical health and stamina.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="content">
+        <h2>Benefits of Regular Exercise</h2>
+        <p>Regular physical activity is one of the most important things you can do for your health. Here are some key benefits:</p>
+        <ul>
+          <li><strong>Improves mental health:</strong> Exercise can help reduce feelings of depression and anxiety.</li>
+          <li><strong>Helps with weight management:</strong> Physical activity helps control your weight by using excess calories that would otherwise be stored as fat.</li>
+          <li><strong>Strengthens muscles and bones:</strong> Regular exercise can help build strong bones and muscles.</li>
+          <li><strong>Increases energy levels:</strong> Exercise can improve your muscle strength and boost your endurance.</li>
+          <li><strong>Reduces the risk of chronic diseases:</strong> Physical activity can help prevent or manage many health problems, including stroke, metabolic syndrome, high blood pressure, type 2 diabetes, and many types of cancer.</li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>Types of Exercise</h2>
+        <p>Different types of exercises offer various benefits. Incorporating a mix of different exercise types can help you get the most health benefits:</p>
+        <ul>
+          <li><strong>Aerobic exercises:</strong> Activities like walking, jogging, swimming, and cycling improve cardiovascular health.</li>
+          <li><strong>Strength training:</strong> Exercises like weightlifting, resistance band exercises, and body-weight exercises build muscle mass and strength.</li>
+          <li><strong>Flexibility exercises:</strong> Stretching exercises, yoga, and Pilates enhance flexibility and range of motion.</li>
+          <li><strong>Balance exercises:</strong> Activities like Tai Chi and balance drills help prevent falls and improve stability.</li>
+        </ul>
+      </div>
+
+      <div class="content">
+        <h2>Creating a Workout Plan</h2>
+        <p>To create an effective workout plan, consider your fitness goals, current fitness level, and personal preferences. Here are some steps to help you get started:</p>
+        <ul>
+          <li><strong>Set realistic goals:</strong> Define clear, achievable goals to stay motivated.</li>
+          <li><strong>Choose activities you enjoy:</strong> Engage in exercises you find fun to keep your motivation high.</li>
+          <li><strong>Mix different types of exercises:</strong> Incorporate aerobic, strength training, flexibility, and balance exercises into your routine.</li>
+          <li><strong>Start slow and progress gradually:</strong> Begin with a comfortable level of activity and gradually increase intensity and duration.</li>
+          <li><strong>Schedule regular workouts:</strong> Aim for at least 150 minutes of moderate aerobic activity or 75 minutes of vigorous activity each week, combined with muscle-strengthening exercises on two or more days a week.</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+
+  </html>
